@@ -5,9 +5,7 @@ export default function UserLayout({
 }) {
   return (
     <>
-      <section className=" flex justify-center w-full max-w-[1440px] ">
-        {children}
-      </section>
+      <section className=" flex justify-center w-full  ">{children}</section>
     </>
   );
 }
