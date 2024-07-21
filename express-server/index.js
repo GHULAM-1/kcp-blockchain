@@ -1,9 +1,11 @@
 const express = require("express");
-const app = express();
 const http = require("http");
-const server = http.createServer(app);
 const { Server } = require("socket.io");
-const port = 4000;
+const { handleSocketConnection } = require("./socket-handlers/main");
+
+const app = express();
+const server = http.createServer(app);
+const port = 3001;
 
 const io = new Server(server, {
   cors: {
@@ -11,22 +13,8 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-let rooms = {};
 
-io.on("connection", (socket) => {
-  console.log(`connected with id ${socket.id}`);
-  socket.on("createRoom", (roomCode) => {
-    console.log("here");
-    if (!rooms[roomCode]) {
-      rooms[roomCode] = {
-        players: [],
-      };
-      socket.join(roomCode);
-      socket.emit("roomCreated", roomCode);
-      console.log(`Room ${roomCode} created by ${socket.id}`);
-    }
-  });
-});
+io.on("connection", (socket) => handleSocketConnection(io, socket));
 
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
