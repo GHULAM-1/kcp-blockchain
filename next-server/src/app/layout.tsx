@@ -5,6 +5,9 @@ import { poker } from "@/components/custom-fonts";
 import { ClerkProvider } from "@clerk/nextjs";
 import Nav from "@/components/nav";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
+
 const Baskerville = Libre_Baskerville({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "700"],
@@ -26,7 +29,7 @@ export default function RootLayout({
       className={` ${Baskerville.variable} ${poker.variable}   w-screen flex justify-center bg-background `}
     >
       <body
-        className={`  w-full max-w-[1440px] flex justify-center flex-col  `}
+        className={`overflow-x-hidden  w-full max-w-[1440px] flex justify-center flex-col  `}
       >
         <ClerkProvider
           appearance={{
@@ -41,6 +44,7 @@ export default function RootLayout({
           >
             <Nav />
             {children}
+            <Toaster></Toaster>
           </ThemeProvider>
         </ClerkProvider>
       </body>

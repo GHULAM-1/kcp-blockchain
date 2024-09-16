@@ -1,4 +1,5 @@
 import { cardType } from "@/types/card-type";
+
 export const deckOfCards: cardType[] = [
   // Hearts
   {
@@ -7,7 +8,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 20,
-    cardImage: "/img/two_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=2.png",
     isFaceCard: false,
   },
   {
@@ -16,7 +17,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 30,
-    cardImage: "/img/three_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=3.png",
     isFaceCard: false,
   },
   {
@@ -25,7 +26,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 40,
-    cardImage: "/img/four_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=4.png",
     isFaceCard: false,
   },
   {
@@ -34,7 +35,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 50,
-    cardImage: "/img/five_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=5.png",
     isFaceCard: false,
   },
   {
@@ -43,7 +44,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 60,
-    cardImage: "/img/six_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=6.png",
     isFaceCard: false,
   },
   {
@@ -52,7 +53,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 70,
-    cardImage: "/img/seven_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=7.png",
     isFaceCard: false,
   },
   {
@@ -61,7 +62,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 80,
-    cardImage: "/img/eight_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=8.png",
     isFaceCard: false,
   },
   {
@@ -70,7 +71,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 90,
-    cardImage: "/img/nine_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=9.png",
     isFaceCard: false,
   },
   {
@@ -79,7 +80,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 100,
-    cardImage: "/img/ten_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=10.png",
     isFaceCard: false,
   },
   {
@@ -88,7 +89,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 110,
-    cardImage: "/img/jack_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=Jack.png",
     isFaceCard: true,
   },
   {
@@ -97,7 +98,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 120,
-    cardImage: "/img/queen_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=Queen.png",
     isFaceCard: true,
   },
   {
@@ -106,7 +107,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 130,
-    cardImage: "/img/king_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=King.png",
     isFaceCard: true,
   },
   {
@@ -115,7 +116,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "hearts",
     cardStrength: 140,
-    cardImage: "/img/ace_of_hearts.png",
+    cardImage: "/cards/Suit=Hearts, Number=Ace.png",
     isFaceCard: true,
   },
 
@@ -126,7 +127,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 20,
-    cardImage: "/img/two_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=2.png",
     isFaceCard: false,
   },
   {
@@ -135,7 +136,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 30,
-    cardImage: "/img/three_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=3.png",
     isFaceCard: false,
   },
   {
@@ -144,7 +145,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 40,
-    cardImage: "/img/four_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=4.png",
     isFaceCard: false,
   },
   {
@@ -153,7 +154,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 50,
-    cardImage: "/img/five_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=5.png",
     isFaceCard: false,
   },
   {
@@ -162,7 +163,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 60,
-    cardImage: "/img/six_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=6.png",
     isFaceCard: false,
   },
   {
@@ -171,7 +172,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 70,
-    cardImage: "/img/seven_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=7.png",
     isFaceCard: false,
   },
   {
@@ -180,7 +181,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 80,
-    cardImage: "/img/eight_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=8.png",
     isFaceCard: false,
   },
   {
@@ -189,7 +190,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 90,
-    cardImage: "/img/nine_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=9.png",
     isFaceCard: false,
   },
   {
@@ -198,7 +199,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 100,
-    cardImage: "/img/ten_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=10.png",
     isFaceCard: false,
   },
   {
@@ -207,7 +208,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 110,
-    cardImage: "/img/jack_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=Jack.png",
     isFaceCard: true,
   },
   {
@@ -216,7 +217,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 120,
-    cardImage: "/img/queen_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=Queen.png",
     isFaceCard: true,
   },
   {
@@ -225,7 +226,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 130,
-    cardImage: "/img/king_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=King.png",
     isFaceCard: true,
   },
   {
@@ -234,7 +235,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "red",
     cardType: "diamonds",
     cardStrength: 140,
-    cardImage: "/img/ace_of_diamonds.png",
+    cardImage: "/cards/Suit=Diamonds, Number=Ace.png",
     isFaceCard: true,
   },
 
@@ -245,7 +246,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 20,
-    cardImage: "/img/two_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=2.png",
     isFaceCard: false,
   },
   {
@@ -254,7 +255,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 30,
-    cardImage: "/img/three_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=3.png",
     isFaceCard: false,
   },
   {
@@ -263,7 +264,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 40,
-    cardImage: "/img/four_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=4.png",
     isFaceCard: false,
   },
   {
@@ -272,7 +273,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 50,
-    cardImage: "/img/five_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=5.png",
     isFaceCard: false,
   },
   {
@@ -281,7 +282,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 60,
-    cardImage: "/img/six_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=6.png",
     isFaceCard: false,
   },
   {
@@ -290,7 +291,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 70,
-    cardImage: "/img/seven_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=7.png",
     isFaceCard: false,
   },
   {
@@ -299,7 +300,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 80,
-    cardImage: "/img/eight_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=8.png",
     isFaceCard: false,
   },
   {
@@ -308,7 +309,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 90,
-    cardImage: "/img/nine_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=9.png",
     isFaceCard: false,
   },
   {
@@ -317,7 +318,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 100,
-    cardImage: "/img/ten_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=10.png",
     isFaceCard: false,
   },
   {
@@ -326,7 +327,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 110,
-    cardImage: "/img/jack_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=Jack.png",
     isFaceCard: true,
   },
   {
@@ -335,7 +336,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 120,
-    cardImage: "/img/queen_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=Queen.png",
     isFaceCard: true,
   },
   {
@@ -344,7 +345,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 130,
-    cardImage: "/img/king_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=King.png",
     isFaceCard: true,
   },
   {
@@ -353,7 +354,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "clubs",
     cardStrength: 140,
-    cardImage: "/img/ace_of_clubs.png",
+    cardImage: "/cards/Suit=Clubs, Number=Ace.png",
     isFaceCard: true,
   },
 
@@ -364,7 +365,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 20,
-    cardImage: "/img/two_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=2.png",
     isFaceCard: false,
   },
   {
@@ -373,7 +374,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 30,
-    cardImage: "/img/three_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=3.png",
     isFaceCard: false,
   },
   {
@@ -382,7 +383,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 40,
-    cardImage: "/img/four_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=4.png",
     isFaceCard: false,
   },
   {
@@ -391,7 +392,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 50,
-    cardImage: "/img/five_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=5.png",
     isFaceCard: false,
   },
   {
@@ -400,7 +401,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 60,
-    cardImage: "/img/six_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=6.png",
     isFaceCard: false,
   },
   {
@@ -409,7 +410,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 70,
-    cardImage: "/img/seven_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=7.png",
     isFaceCard: false,
   },
   {
@@ -418,7 +419,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 80,
-    cardImage: "/img/eight_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=8.png",
     isFaceCard: false,
   },
   {
@@ -427,7 +428,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 90,
-    cardImage: "/img/nine_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=9.png",
     isFaceCard: false,
   },
   {
@@ -436,7 +437,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 100,
-    cardImage: "/img/ten_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=10.png",
     isFaceCard: false,
   },
   {
@@ -445,7 +446,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 110,
-    cardImage: "/img/jack_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=Jack.png",
     isFaceCard: true,
   },
   {
@@ -454,7 +455,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 120,
-    cardImage: "/img/queen_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=Queen.png",
     isFaceCard: true,
   },
   {
@@ -463,7 +464,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 130,
-    cardImage: "/img/king_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=King.png",
     isFaceCard: true,
   },
   {
@@ -472,7 +473,7 @@ export const deckOfCards: cardType[] = [
     cardColor: "black",
     cardType: "spades",
     cardStrength: 140,
-    cardImage: "/img/ace_of_spades.png",
+    cardImage: "/cards/Suit=Spades, Number=Ace.png",
     isFaceCard: true,
   },
 ];

@@ -5,11 +5,17 @@ import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { socket } from "@/socket";
 import { Input } from "./ui/input";
+import { Check } from "lucide-react";
+import { Clipboard } from "lucide-react";
+
 import { useUser } from "@clerk/nextjs";
 import { roomType } from "@/types/room-type";
 import { useGeneralStore } from "@/stores/general-store";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function CreateNewGame({
   gameName,
@@ -21,6 +27,16 @@ export default function CreateNewGame({
   const [maxPlayers, setMaxPlayers] = useState<number>(0);
   const [roomName, setRoomName] = useState<string>();
   const [gameStatus, setGameStatus] = useState<string>("private");
+  const { toast } = useToast();
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopyingOfGameCode = (gameCode: string) => {
+    navigator.clipboard.writeText(gameCode);
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
 
   const handleRoomCreation = () => {
     console.log("in it");
@@ -34,10 +50,43 @@ export default function CreateNewGame({
       user?.emailAddresses[0].emailAddress,
       gameName,
       user?.firstName,
-      gameStatus // Pass the gameStatus value
+      gameStatus,
+      user?.imageUrl,
+      {
+        name: user?.firstName,
+        email: user?.emailAddresses[0].emailAddress,
+        mobileNumber: "03074593601",
+        image: user?.imageUrl,
+        playerState: {
+          turnNumber: 0,
+          cards: [],
+        },
+      }
     );
-    socket.on("roomCreated", (createdRoomCode: string, rooms) => {
-      console.log("room created");
+    socket.on("roomCreated", (newRoom: roomType) => {
+      console.log(newRoom.gameCode, "here");
+      toast({
+        title: "Game code",
+        description: "anyone with the code can join the game",
+        action: (
+          <ToastAction
+            altText="Try again"
+            onClick={() => handleCopyingOfGameCode(newRoom?.gameCode)}
+          >
+            {isCopied ? (
+              <div className="flex flex-row-reverse justify-center items-center gap-2">
+                <div>copied</div>
+                <Check className="w-[10px] h-[10px] fill-none dark:stroke-black stroke-white"></Check>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <Clipboard className="w-4 h-4 fill-none"></Clipboard>
+                <span>Copy code</span>
+              </div>
+            )}
+          </ToastAction>
+        ),
+      });
       socket.emit("giveAllGames");
     });
   };
@@ -55,9 +104,7 @@ export default function CreateNewGame({
             </Button>
           </DialogTrigger>
           <DialogContent>
-            <div className="text-5xl font-bold ">
-              creating new {gameName} game
-            </div>
+            <div className="text-3xl font-bold ">creating new game</div>
 
             <div>
               <div className="mb-2">room Name</div>

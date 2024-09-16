@@ -4,6 +4,9 @@ const { handleDeleteGame } = require("./delete-game");
 const { handleJoinGame } = require("./join-game");
 const { handleGiveAGameState } = require("./give-a-game-state");
 const { handleInitializePlayerCards } = require("./initialize-player-cards");
+const { handleTimer } = require("./timer");
+const { handleCardClicked } = require("./card-clicked");
+
 let rooms = [];
 
 const handleSocketConnection = (io, socket) => {
@@ -18,7 +21,9 @@ const handleSocketConnection = (io, socket) => {
       gameType,
       creatorName,
       // gameState,
-      gameStatus
+      gameStatus,
+      creatorImage,
+      creatorObj
     ) =>
       handleCreateRoom(
         io,
@@ -32,12 +37,16 @@ const handleSocketConnection = (io, socket) => {
         creatorName,
         // gameState,
         gameStatus,
+        creatorImage,
+        creatorObj,
         rooms
       )
   );
 
   socket.on("giveAllGames", () => handleGiveAllGames(io, rooms));
-  socket.on("deleteGame", (roomCode) => handleDeleteGame(io, roomCode, rooms));
+  socket.on("deleteGame", (roomCode) => {
+    rooms = handleDeleteGame(io, roomCode, rooms);
+  });
   socket.on("joinGame", (userObj, roomCode) =>
     handleJoinGame(io, socket, userObj, roomCode, rooms)
   );
@@ -47,6 +56,11 @@ const handleSocketConnection = (io, socket) => {
   socket.on("initializePlayerCards", (distributedCardsArray, roomCode) =>
     handleInitializePlayerCards(io, distributedCardsArray, roomCode, rooms)
   );
+  socket.on("timer", (roomCode) => handleTimer(io, rooms, roomCode));
+  socket.on("cardClicked", (roomCode) =>
+    handleCardClicked(io, rooms, roomCode)
+  );
+  socket;
 };
 
 module.exports = {

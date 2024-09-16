@@ -1,8 +1,8 @@
 const handleDeleteGame = (io, roomCode, rooms) => {
-  rooms = rooms.filter((room) => room.roomCode !== roomCode);
+  newRooms = rooms.filter((room) => room.roomCode !== roomCode);
   io.in(roomCode).socketsLeave(roomCode);
-  io.emit("allGames", rooms);
-  console.log(`Room ${roomCode} deleted`);
+  io.emit("isDeleted", newRooms , );
+  return newRooms;
 };
 module.exports = {
   handleDeleteGame,

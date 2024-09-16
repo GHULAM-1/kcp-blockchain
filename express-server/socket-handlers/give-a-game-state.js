@@ -1,4 +1,4 @@
-const handleGiveAGameState = (socket, roomCode) => {
+const handleGiveAGameState = (socket, roomCode , rooms) => {
   const room = rooms.find((room) => room.roomCode === roomCode);
   socket.emit("gameState", room);
 };

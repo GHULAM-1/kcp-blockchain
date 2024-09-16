@@ -1,3 +1,4 @@
+const { generateCode } = require("../utils/generate-code");
 const handleCreateRoom = (
   io,
   socket,
@@ -8,8 +9,9 @@ const handleCreateRoom = (
   roomCreatorEmail,
   gameType,
   creatorName,
-  // gameState,
   gameStatus,
+  creatorImage,
+  creatorObj,
   rooms
 ) => {
   console.log(
@@ -25,7 +27,7 @@ const handleCreateRoom = (
     const newRoom = {
       roomCode,
       players: [],
-      watchers:[],
+      watchers: [],
       maxPlayers,
       roomCreatorId,
       roomName,
@@ -35,10 +37,15 @@ const handleCreateRoom = (
       creatorName,
       gameState: {},
       gameStatus,
+      gameCode: generateCode(),
+      creatorImage,
+      currentGlobalTurn: 0,
+      isDistributed: false,
     };
     rooms.push(newRoom);
+    newRoom.players.push(creatorObj);
     socket.join(roomCode);
-    socket.emit("roomCreated", roomCode, rooms);
+    socket.emit("roomCreated", newRoom); // Emit only the new room object
     console.log(`Room ${roomCode} created by ${socket.id}`);
   }
   console.log("rooms array:", rooms);
