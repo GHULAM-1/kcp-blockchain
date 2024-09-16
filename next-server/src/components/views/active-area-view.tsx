@@ -4,11 +4,7 @@ import DistributeCardsBtn from "../ditribute-cards-btn";
 import isGameCreatorSocket from "@/utils/is-game-creator-socket";
 isGameCreatorSocket;
 import { useGeneralStore } from "@/stores/general-store";
-export default function ActiveAreaView({
-  playerNumber,
-}: {
-  playerNumber: string;
-}) {
+export default function ActiveAreaView() {
   const { currentRoom } = useGeneralStore();
 
   return (

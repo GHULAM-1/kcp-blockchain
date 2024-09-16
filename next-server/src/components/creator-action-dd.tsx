@@ -50,7 +50,8 @@ export default function CreatorActionDD({
           </DialogContent>
         </Dialog>
         <div className="flex gap-1 items-center">
-          <GameConfig AGameOfAType={roomName} purpose="edit" />
+          <GameConfig />
+          {/* <GameConfig AGameOfAType={roomName} purpose="edit" /> */}
         </div>
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DeleteGame gameName={roomName} roomCode={roomCode} />

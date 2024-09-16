@@ -7,7 +7,7 @@ export type playerType = {
   email?: string | null;
   mobileNumber?: string;
   image?: string | null;
-  gamesPlayed: {
+  gamesPlayed?: {
     gameId?: string;
     isWon?: boolean;
     isDraw?: boolean;

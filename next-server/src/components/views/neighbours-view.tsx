@@ -76,6 +76,7 @@ export default function NeighboursView({
           </Avatar>
         )}
         {currentRoom.isDistributed &&
+          player?.playerState?.turnNumber &&
           currentTurn === player?.playerState.turnNumber && (
             <div className="w-[50px] h-[50px] rounded-full bg-red-500 px-2">
               {timeLeft}
