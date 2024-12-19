@@ -30,6 +30,7 @@ export default function Overview() {
       console.error("Error fetching player data:", error);
     }
   };
+  console.log("primary user wallet info : " , user?.primaryWeb3Wallet)
 
   useEffect(() => {
     if (user && !isPlayerCreated) {
